@@ -1,0 +1,71 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  height: 100vh;
+  padding: 16px;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Logo {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+}
+
+.Title {
+  margin: 0;
+  padding: 0;
+}
+
+.ChatContainer {
+  flex-grow: 1;
+  width: 100%;
+  margin-top: 16px;
+  background-color: #ffffff; /* Default light background */
+  border-radius: 16px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+ 
+}
+
+/* Scrollbar styles for WebKit browsers */
+.ChatContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ChatContainer::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.ChatContainer::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  .ChatContainer {
+    background-color: #212121; /* Dark background */
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  }
+
+  .ChatContainer::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .ChatContainer::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+}

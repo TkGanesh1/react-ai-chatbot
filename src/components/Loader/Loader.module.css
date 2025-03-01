@@ -1,0 +1,42 @@
+.LoaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(243, 243, 243, 0.1); /* Slight transparency */
+  z-index: 1000; /* Keep above all elements */
+}
+
+.LoaderBackgroundBlur {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2); /* Light background */
+
+  /* Masking */
+  -webkit-mask-image: url("/LoaderMask.png");
+  mask-image: url("/LoaderMask.png");
+  -webkit-mask-size: 100px 100px;
+  mask-size: 100px 100px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+
+  /* Smaller, softer drop-shadow */
+  filter: drop-shadow(
+    0px 0px 3px rgba(128, 128, 128, 0.5)
+  ); /* Reduced shadow size */
+}
+
+.LottieLoader {
+  width: 100px;
+  height: 100px;
+
+  /* Matching smaller shadow */
+  filter: drop-shadow(0px 0px 3px rgba(128, 128, 128, 0.5));
+}

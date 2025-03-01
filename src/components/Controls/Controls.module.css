@@ -1,0 +1,73 @@
+.Controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.TextAreaContainer {
+  flex-grow: 1;
+  padding: 8px 16px;
+  line-height: 0;
+  border-radius: 16px;
+  background: light-dark(#ffffff, #212121);
+
+  /* Matching TextArea styles */
+  display: flex;
+  align-items: center;
+  min-height: 40px; /* Ensure a consistent height */
+  border: 1px solid light-dark(#ccc, #444); /* Light border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  overflow-y: auto; /* Enable vertical scrolling */
+  
+  /* Scrollbar styles */
+  scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+  scrollbar-width: thin;
+}
+
+/* Webkit-based browsers (Chrome, Safari) */
+.TextAreaContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.TextAreaContainer::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.TextAreaContainer::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.TextArea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 16px;
+  background: light-dark(#ffffff, #212121);
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background: light-dark(#0d0d0d, #ececec);
+}
+
+.Button svg {
+  fill: light-dark(#f3f3f3, #171717);
+}
+
+.TextArea:disabled,
+.Button:disabled {
+  opacity: 0.35;
+}

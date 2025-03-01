@@ -1,0 +1,28 @@
+/* Chat container */
+.Chat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  padding: 8px;
+  overflow-y: auto; /* Vertical scroll only */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  max-width: 100%; /* Prevent overflow */
+  box-sizing: border-box;
+}
+
+/* Message styling */
+.Message {
+  width: 90%;
+  max-width: 100%; /* Ensure message doesn't overflow */
+  padding: 0 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  box-sizing: border-box; /* Include padding in width calculation */
+
+  /* Styles for user messages */
+  &[data-role="user"] {
+      align-self: flex-end;
+      background: light-dark(#f3f3f3, #303030);
+  }
+}
